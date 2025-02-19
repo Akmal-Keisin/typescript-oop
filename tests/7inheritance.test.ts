@@ -1,8 +1,10 @@
 describe('Inheritance', () => {
+	// Parent Class
 	class Animal {
 		constructor(public name: string) {}
 	}
 
+	// Child Class that inherits from Animal
 	class Cat extends Animal {
 		constructor(
 			name: string,
