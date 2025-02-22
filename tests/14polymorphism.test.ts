@@ -45,4 +45,16 @@ describe('Polymorphism', () => {
 
 		expect(throwError).toThrow(Error);
 	});
+
+	it('should be able to set method parameter to polymorphic type', () => {
+		function makeSound(animal: Animal) {
+			return animal.makeSound();
+		}
+
+		let animal: Animal = new Cat('Marta');
+		expect(makeSound(animal)).toBe('Meow!');
+
+		animal = new Dog('Buddy');
+		expect(makeSound(animal)).toBe('Woof!');
+	});
 });
